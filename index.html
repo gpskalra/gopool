@@ -5,17 +5,32 @@
 		<h1><font color="00FF00">Welcome to GP's site</font></h1>
 
 		<form>
-		  UserName<br>
-		  <input type="text" name="firstname">
-		  <br>
-		  Password
-		  <br>
-		  <input type="text" name="lastname"><br>
-		  <!-- Using button and not input. Does it have an added benefit ? -->
-		  <!--<input type="submit" style="font-size:12pt;color:white;background-color:blue;" value="Login">-->
-		  <button type="submit" style="font-size:12pt;color:white;background-color:blue;" name="action" value="login">Login</button>
-		  <button type="submit" style="font-size:12pt;color:white;background-color:red;"name="action" value="register">Register</button>
+			UserName<br>
+			<input type="text" name="username">
+			<br>
+			Password
+			<br>
+			<input type="text" name="password"><br>
+			<button type="submit" style="font-size:12pt;color:white;background-color:blue;" name="action" value="login">Login</button>
+			<button type="submit" style="font-size:12pt;color:white;background-color:red;"name="action" value="register">Register</button>
 		</form>
+
+		FirstName<br>
+		<input id="first_name" type="text" name="firstname">
+		<br>
+	  	LastName
+		<br>
+		<input id="last_name" type="text" name="lastname"><br>
+		<button style="font-size:12pt;color:white;background-color:blue;" name="action" value="get_my_full_name" onclick="get_my_full_name()">Get My Full Name</button>
+
+		<p id="full_name">Garbage</p>
+
+		<script>
+			function get_my_full_name() {
+				document.getElementById("full_name").textContent = document.getElementById("first_name").value + ' ' + document.getElementById("last_name").value;
+			}
+		</script>
+
 
 	</body>
 </html>
