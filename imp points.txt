@@ -1,0 +1,10 @@
+Task 1: Manipulating DOM via JavaScript
+1. Hyperlink/button can be used for 3 purposes:
+	a. Going to another link/page: Use 'a' tag for this
+	b. Submitting a form: Use <button type='submit'> OR <input type='submit'>
+	c. Performing any action on page: Use button tag
+2. DOM:
+	a. DOM: Document Object Model: HTML is kind of tree structure. Browser parses this HTML and creates a tree structure at its end. This tree structure's root is document object and this tree itself is called Document Object Model (DOM).
+2. Accessing/Manipulating DOM via JS:
+	a. document is the object via which we can access/manipulate DOM via JS
+	b. Not only we can update some elements in DOM, we can also create/delete new elements in DOM. For e.g. we can add child elements within a div tag. So Javascript has all powers for accessing/manipulating DOM
