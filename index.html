@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
-<body>
+	<body style="text-align: center;">
 
-<h1>Welcome to GP's site</h1>
+		<h1><font color="00FF00">Welcome to GP's site</font></h1>
 
-<form>
-  UserName<br>
-  <input type="text" name="firstname"><br>
-  Password<br>
-  <input type="text" name="lastname"><br>
-  <input type="submit" value="Login">
-</form>
+		<form>
+		  UserName<br>
+		  <input type="text" name="firstname">
+		  <br>
+		  Password
+		  <br>
+		  <input type="text" name="lastname"><br>
+		  <!-- Using button and not input. Does it have an added benefit ? -->
+		  <!--<input type="submit" style="font-size:12pt;color:white;background-color:blue;" value="Login">-->
+		  <button type="submit" style="font-size:12pt;color:white;background-color:blue;" name="action" value="login">Login</button>
+		  <button type="submit" style="font-size:12pt;color:white;background-color:red;"name="action" value="register">Register</button>
+		</form>
 
-<button type="button">Register</button>
-
-</body>
+	</body>
 </html>
