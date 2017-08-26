@@ -4,16 +4,18 @@
 
 		<h1><font color="00FF00">Welcome to GP's site</font></h1>
 
-		<form>
+		<form id="loginForm" onsubmit="validateCredentials(event);">
 			UserName<br>
-			<input type="text" name="username">
+			<input id="user_name" type="text" name="username">
 			<br>
 			Password
 			<br>
-			<input type="text" name="password"><br>
-			<button type="submit" style="font-size:12pt;color:white;background-color:blue;" name="action" value="login">Login</button>
-			<button type="submit" style="font-size:12pt;color:white;background-color:red;"name="action" value="register">Register</button>
+			<input id="password" type="text" name="password"><br>
+			<button type="submit" style="font-size:12pt;color:white;background-color:blue;">Login</button>
+			<button type="button" style="font-size:12pt;color:white;background-color:red;">Register</button>
 		</form>
+
+		<p id=login_error></p>
 
 		FirstName<br>
 		<input id="first_name" type="text" name="firstname">
@@ -24,10 +26,23 @@
 		<button style="font-size:12pt;color:white;background-color:blue;" name="action" value="get_my_full_name" onclick="get_my_full_name()">Get My Full Name</button>
 
 		<p id="full_name">Garbage</p>
-
+		
 		<script>
 			function get_my_full_name() {
 				document.getElementById("full_name").textContent = document.getElementById("first_name").value + ' ' + document.getElementById("last_name").value;
+			}
+
+			function isEmpty(str) {
+				return (!str || 0 === str.trim().length);
+			}
+
+			function validateCredentials(event) {
+				if (!isEmpty(document.getElementById("user_name").value) && !isEmpty(document.getElementById("password").value)) {
+					event.target.submit(); // Submit the form
+				} else {
+					document.getElementById("login_error").textContent = "Username or Password invalid";		
+					event.preventDefault();
+				}
 			}
 		</script>
 
